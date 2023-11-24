@@ -28,11 +28,17 @@ class PostResource extends Resource
                 Forms\Components\TextInput::make('body')
                     ->maxLength(1000),
                 Forms\Components\Select::make('category')
-                    ->options([]),
+                    ->options([
+                        'news' => 'News',
+                        'tech' => 'Technology'
+                    ]),
                 Forms\Components\Repeater::make('author')
                     ->schema([
                         Forms\Components\Select::make('name')
-                            ->options([]),
+                            ->options([
+                                'John Doe' => 'John Doe',
+                                'Jane Doe' => 'Jane Doe',
+                            ]),
                         Forms\Components\TextInput::make('notes')
                             ->maxLength(255),
                     ])
